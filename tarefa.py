@@ -1,11 +1,10 @@
-
 class Tarefa:
 
     def __init__(self, titulo, desc, data, status, categ):
         self.titulo = titulo
         self.desc = desc
         self.data = data
-        self.status = "pendente" #começa sempre pendente
+        self.status = "pendente" #começa sempre pendente 
         self.categ = categ
 
 
@@ -20,6 +19,9 @@ class Tarefa:
             print(f"A tarefa {self.titulo} continuará como {self.status}.")
         else:
             print("Erro. Escreva 'S' para sim ou 'N' para não.")
+
+    def __str__(self):
+        return f"Título: {self.titulo}, Descrição: {self.desc}, Data: {self.data}, Categoria: {self.categ}, Status: {self.status}"
 
 
 
